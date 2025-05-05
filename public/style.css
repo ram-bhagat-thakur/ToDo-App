@@ -1,0 +1,100 @@
+body{
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+ul{
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+}
+h1{
+    font-size: xx-large;
+}
+form, .saved-form{
+    background-color:white;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 5px;
+    width: 100%;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    align-self: center;
+}
+.input{
+    height: 30px;
+    width: 60%;
+    margin-right: 1%;
+}
+select{
+    width: 20%;
+    height: 35px;
+    margin-right: 1%;
+}
+button{
+    width: 10%;
+    height: 35px;
+    background-color: rgb(155, 195, 235);
+    border-radius: 5px;
+    border: none;
+}
+button:hover{
+    cursor: pointer;
+    background-color: rgb(155, 8, 235);
+}
+.task-input{
+    text-align: center;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+}
+.filter{
+    margin-left: 0px;
+}
+h3{
+    margin-top: 40px;
+    text-align: left;
+    margin-bottom: 40px;
+
+}
+.all{
+    margin-left: 15px;
+    font-weight: 500;
+    font-size: medium;
+    color: rgb(64, 86, 142);
+}
+.all:hover{
+    cursor: pointer;
+    text-decoration: underline;
+    transition-duration: 3ms;
+}
+.input-saved{
+    height: 30px;
+    width: 25%;
+    margin-right: 10px;
+}
+
+#Priority, .update, .delete{
+    width: 20%;
+}
+.saved-form{
+    border-left: 5px solid rgb(32, 178, 83);
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+.right-align{
+    width: 100%;
+}
+
+#check{
+    margin-right: 10px;
+    width: 30%;
+    text-align: left;
+}
+hr{
+    height: 2px;
+    opacity: 30%;
+}

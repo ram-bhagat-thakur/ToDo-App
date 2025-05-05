@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section class="task-input">
+        <h1>Todo List</h1>
+        <hr>
+        <form action="/" method="post">
+            <input type="text" name="todo" id="ele1" placeholder="Enter the task" class="input">
+            <select name="priority" id="Priority">
+                <option value="Medium Priority">Medium Priority</option>
+                <option value="High Priority">High Priority</option>
+                <option value="Low Priority">Low Priority</option>
+            </select>
+            <button type="submit" id="add">Add</button>
+        </form>
+
+        <div class="filter" id="priorityFilter">
+            <h3 id="fltrtxt">Filter by priority: <a href="" class="all">All</a>
+                <a href="" class="high all">High</a> <a href="" class="medium all">Medium</a> <a href=""
+                    class="low all">Low</a>
+            </h3>
+        </div>
+        <% for(var i=0; i<ejes.length; i++){ %>
+            <% if(ejes[i].todo !=='' ){ %>
+                <ul>
+                    <li>
+                        <form class="saved-form">
+                            <input type="checkbox" class="checkbox">
+                            <h4 id="check">
+                                <%= ejes[i].todo %>
+                            </h4>
+                            <div class="right-align">
+                                <input type="text" placeholder="Enter the task" class="input-saved input" id="update"
+                                    readonly value=<%=ejes[i].todo %>>
+                                <select name="priority" class="priority">
+                                    <option value="Medium Priority" <%=ejes[i].priority==='Medium Priority' ? 'selected'
+                                        : '' %>>Medium Priority</option>
+                                    <option value="High Priority" <%=ejes[i].priority==='High Priority' ? 'selected'
+                                        : '' %>>High Priority</option>
+                                    <option value="Low Priority" <%=ejes[i].priority==='Low Priority' ? 'selected' : ''
+                                        %>>Low Priority</option>
+                                </select>
+                                <button type="button" class="update edit" onclick="editTodo()"
+                                    id="updateButton">Update</button>
+                                <button type="button" class="delete" onclick="deleteTodo()">Delete</button>
+                            </div>
+                        </form>
+                    </li>
+                </ul>
+                <%}%>
+                    <% } %>
+                        <hr>
+    </section>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
