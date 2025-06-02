@@ -34,41 +34,14 @@ document.querySelectorAll(".edit").forEach(editButton => {
     });
 });
 
-let filterByText = document.getElementById("fltrtxt").value;
-filterByText.onclick = function () {
-    if (filterByText == "all") {
+document.querySelectorAll(".filter a").forEach(filterLink => {
+    filterLink.addEventListener("click", function (event) {
+        event.preventDefault();
+        let priority = this.innerText.toLowerCase();
+        
         document.querySelectorAll("li").forEach(li => {
-            li.style.display = "block"; // Show all items
+            let itemPriority = li.querySelector(".priority").value.toLowerCase();
+            li.style.display = priority === "all" || itemPriority.includes(priority) ? "block" : "none";
         });
-    }
-    else if (filterByText == "High") {
-        let high = document.getElementsByClassName("priority").value;
-
-        document.querySelectorAll("li").forEach(li => {
-            li.style.display = "none"; // Show all items
-        });
-        high.forEach(li => {
-            li.style.display = "block"; // Show all items
-        });
-    }
-    else if (filterByText == "Medium") {
-        let medium = document.getElementsByClassName("priority").value;
-
-        document.querySelectorAll("li").forEach(li => {
-            li.style.display = "none"; // Show all items
-        });
-        medium.forEach(li => {
-            li.style.display = "block"; // Show all items
-        });
-    }
-    else if (filterByText == "Low") {
-        let low = document.getElementsByClassName("priority").value;
-
-        document.querySelectorAll("li").forEach(li => {
-            li.style.display = "none"; // Show all items
-        });
-        low.forEach(li => {
-            li.style.display = "block"; // Show all items
-        });
-    }
-}
+    });
+});
