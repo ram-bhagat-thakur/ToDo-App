@@ -5,6 +5,9 @@ body{
     align-content: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+a{
+    text-decoration: none;
+}
 ul{
     list-style-type: none;
     padding: 0px;
@@ -13,7 +16,7 @@ ul{
 h1{
     font-size: xx-large;
 }
-form, .saved-form{
+.upper-list, .saved-form{
     background-color:white;
     padding-top: 20px;
     padding-bottom: 20px;
@@ -21,9 +24,8 @@ form, .saved-form{
     width: 100%;
     margin-bottom: 20px;
     margin-top: 20px;
-    align-self: center;
 }
-.input{
+.upper-list .input{
     height: 30px;
     width: 60%;
     margin-right: 1%;
@@ -39,6 +41,7 @@ button{
     background-color: rgb(155, 195, 235);
     border-radius: 5px;
     border: none;
+    margin: 0px;
 }
 button:hover{
     cursor: pointer;
@@ -72,18 +75,40 @@ h3{
 }
 .input-saved{
     height: 30px;
-    width: 25%;
-    margin-right: 10px;
+    width: 50%;
+    margin-right: 1%;
+}
+form{
+    display: inline;
+    unicode-bidi:normal;
 }
 
-#Priority, .update, .delete{
+#Priority, .update{
     width: 20%;
+}
+.delButton{
+    width: 20%;
+    text-align: left;
+}
+.delete{
+    width: 80%;
+}
+.added-list{
+    width: 80%;
 }
 .saved-form{
     border-left: 5px solid rgb(32, 178, 83);
     display: flex;
     align-items: center;
     flex-direction: row;
+    width: 100%;
+    text-align: right;
+    gap: 1%;
+}
+.todo-item{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 .right-align{
     width: 100%;
