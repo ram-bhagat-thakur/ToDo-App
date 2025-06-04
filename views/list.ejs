@@ -12,8 +12,8 @@
     <section class="task-input">
         <h1>Todo List</h1>
         <hr>
-        <form action="/" method="post">
-            <input type="text" name="todo" id="ele1" placeholder="Enter the task" class="input">
+        <form action="/" method="post" class="upper-list">
+            <input type="text" name="todo" id="ele1" placehulder="Enter the task" class="input">
             <select name="priority" id="Priority">
                 <option value="Medium Priority">Medium Priority</option>
                 <option value="High Priority">High Priority</option>
@@ -28,18 +28,15 @@
                     class="low all">Low</a>
             </h3>
         </div>
-        <% for(var i=0; i<ejes.length; i++){ %>
+        <% for(let i=0; i<ejes.length; i++){ %>
             <% if(ejes[i].todo !=='' ){ %>
                 <ul>
                     <li>
-                        <form class="saved-form">
-                            <input type="checkbox" class="checkbox">
-                            <h4 id="check">
-                                <%= ejes[i].todo %>
-                            </h4>
-                            <div class="right-align">
-                                <input type="text" placeholder="Enter the task" class="input-saved input" id="update"
-                                    readonly value=<%=ejes[i].todo %>>
+                        <div class="saved-form">
+                        <form action="/update" method="POST" class="added-list">
+                            <input type="hidden" name="id" value="<%= ejes[i].id %>">
+                                <input type="text" name="todo" placehulder="Enter the task" class="input-saved input"
+                                    id="update" value=<%=ejes[i].todo %>>
                                 <select name="priority" class="priority">
                                     <option value="Medium Priority" <%=ejes[i].priority==='Medium Priority' ? 'selected'
                                         : '' %>>Medium Priority</option>
@@ -48,11 +45,13 @@
                                     <option value="Low Priority" <%=ejes[i].priority==='Low Priority' ? 'selected' : ''
                                         %>>Low Priority</option>
                                 </select>
-                                <button type="button" class="update edit" onclick="editTodo()"
-                                    id="updateButton">Update</button>
-                                <button type="button" class="delete" onclick="deleteTodo()">Delete</button>
-                            </div>
+                                <button type="submit" class="update">Update</button>
                         </form>
+                        <form action="/delete" method="POST" class="delButton">
+                            <input type="hidden" name="id" value="<%= ejes[i].id %>">
+                            <button type="submit" class="delete">Delete</button>
+                        </form>
+                        </div>
                     </li>
                 </ul>
                 <%}%>
