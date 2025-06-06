@@ -9,3 +9,12 @@ document.querySelectorAll(".filter a").forEach(filterLink => {
         });
     });
 });
+
+
+function validateForm() {
+    const todoText = document.getElementById("ele1").value.trim();
+    if (!todoText) {
+        alert("Please enter a task to add");
+        return false; // Stops form submission
+    }
+}
