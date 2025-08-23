@@ -1,6 +1,6 @@
 ### 📋 ToDo App
 
-A dynamic, full-stack ToDo application built using **Node.js**, **Express**, **EJS**, and **MongoDB**, styled with **CSS**. This project is part of my web development journey and demonstrates CRUD operations, responsive UI, and secure deployment practices.
+A dynamic ToDo application built using **Node.js**, **Express**, and **EJS**, styled with **CSS**. This project is part of my personal journey to master full-stack development. It demonstrates core CRUD operations using an in-memory array to manage tasks, along with task prioritization and a clean user interface.
 
 🔗 **Live Preview:** [todo-app-twko.onrender.com](https://todo-app-twko.onrender.com)
 
@@ -9,21 +9,22 @@ A dynamic, full-stack ToDo application built using **Node.js**, **Express**, **E
 ### 🚀 Features
 
 - ✅ Add, edit, and delete tasks
-- 🔍 Filter tasks by Priority
-- 🧼 Clean UI with HTML, EJS and CSS
-- 🔐 Secure backend with environment variable management
-- 🌐 Deployed on Render for public access
+- 📌 Assign priority levels to tasks
+- 📅 Mark tasks as completed or pending
+- 🔍 Filter tasks by priority
+- 🧼 Clean UI using HTML, EJS, and CSS
+- 🧠 Backend logic handled via array (no database used)
 
 ---
 
 ### 🛠️ Tech Stack
 
-| Layer        | Technology            |
-|--------------|------------------------|
-| Frontend     | EJS, CSS               |
-| Backend      | Node.js, Express       |
-| Database     | MongoDB (via Mongoose) |
-| Deployment   | Render                 |
+| Layer        | Technology       |
+|--------------|------------------|
+| Frontend     | EJS, CSS, HTML   |
+| Backend      | Node.js, Express |
+| Data Storage | JavaScript Array |
+| Deployment   | Render           |
 
 ---
 
@@ -36,10 +37,6 @@ cd ToDo-App
 
 # Install dependencies
 npm install
-
-# Set up environment variables
-touch .env
-# Add your MongoDB URI and other secrets in .env
 
 # Start the server
 npm start
@@ -59,11 +56,12 @@ ToDo-App/
 
 ### 🧠 Learning Outcomes
 
-- ✅ Built a full-stack CRUD application from scratch
-- 🔐 Practiced secure deployment using environment variables
-- 🔄 Strengthened understanding of RESTful APIs and MVC architecture
-- 🎨 Enhanced UI/UX using Tailwind CSS
-- 🧠 Gained hands-on experience with backend logic, frontend templating, and database integration
+- ✅ Built a full-stack CRUD application using only arrays for data storage
+- 🔐 Practiced secure deployment
+- 🔄 Strengthened understanding of routing, templating, and server-side rendering
+- 🎨 Practiced clean UI design with EJS and CSS
+- 🧠 Improved backend logic and task prioritization without a database
+- 🚀 Deployed a working app using Render
 
 ---
 
